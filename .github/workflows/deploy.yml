@@ -1,3 +1,4 @@
+# Triggering workflow
 name: Deploy to Hostinger
 
 on:

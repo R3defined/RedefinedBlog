@@ -1,0 +1,48 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'hugo-theme-stack-master'
+
+[params]
+  # Theme settings
+  mainSections = ['posts']
+  featuredImageField = 'image'
+  rssFullContent = true
+
+[params.colorScheme]
+toggle = true
+default = "light"
+
+[params.colorScheme.light]
+primary = "#2d6cdf"
+background = "#f5f6fa"
+card = "#fff"
+text = "#222"
+secondary = "#222"
+border = "#e5e7eb"
+link = "#2d6cdf"
+linkHover = "#1a4fa3"
+
+[params.colorScheme.dark]
+primary = "#2d6cdf"
+background = "#181a1b"
+card = "#23272f"
+text = "#fff"
+secondary = "#aaa"
+border = "#23272f"
+link = "#2d6cdf"
+linkHover = "#6ea8fe"
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
+    weight = -100
+    pre = 'home'
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about'
+    weight = -90
+    pre = 'user'

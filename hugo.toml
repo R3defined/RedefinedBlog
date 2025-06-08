@@ -1,6 +1,6 @@
 baseURL = 'https://Blog.reecehall.com'
 languageCode = 'en-us'
-title = 'The Blog Of Reece'
+title = 'the Blog Of Reece'
 theme = 'hugo-theme-stack-master'
 
 [params]
@@ -46,5 +46,3 @@ linkHover = "#6ea8fe"
     url = '/about'
     weight = -90
     pre = 'user'
-
-publishDir = "public_html"

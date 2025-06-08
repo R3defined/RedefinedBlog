@@ -1,6 +1,6 @@
 baseURL = 'https://Blog.reecehall.com'
 languageCode = 'en-us'
-title = 'the Blog Of Reece'
+title = 'The Blog Of Reece'
 theme = 'hugo-theme-stack-master'
 
 [params]

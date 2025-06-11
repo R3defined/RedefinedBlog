@@ -1,0 +1,33 @@
+{{- $ThemeVersion := "3.30.0" -}}
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
+    </section>
+    
+    <section class="powerby">
+        {{ with .Site.Params.footer.customText }}
+            {{ . | safeHTML }} <br/>
+        {{ end }}
+
+        <!-- Social Links -->
+        <div class="social-links" style="margin: 15px 0;">
+            <a href="https://github.com/R3defined" target="_blank" rel="noopener" style="margin: 0 10px; text-decoration: none;">
+                <span style="font-weight: bold;">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/redefinedreece/" target="_blank" rel="noopener" style="margin: 0 10px; text-decoration: none;">
+                <span style="font-weight: bold;">LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/mr.redefined" target="_blank" rel="noopener" style="margin: 0 10px; text-decoration: none;">
+                <span style="font-weight: bold;">Instagram</span>
+            </a>
+        </div>
+
+        <!-- Custom footer text - modify these lines as needed -->
+        <p>Powered by <a href="https://reecehall.com/" target="_blank" rel="noopener">Redefined</a></p>
+        <p>Built <b><a href="https://github.com/R3defined" target="_blank" rel="noopener" data-version="{{ $ThemeVersion }}"></a></b>  by <a href="https://jimmycai.com" target="_blank" rel="noopener">Reece</a></p>
+    </section>
+</footer> 

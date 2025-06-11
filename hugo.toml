@@ -9,6 +9,10 @@ theme = 'hugo-theme-stack-master'
   featuredImageField = 'image'
   rssFullContent = true
 
+[params.footer]
+  since = 2025
+  
+
 [params.colorScheme]
 toggle = true
 default = "light"

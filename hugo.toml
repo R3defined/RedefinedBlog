@@ -3,15 +3,34 @@ languageCode = 'en-us'
 title = 'The Blog Of Reece'
 theme = 'hugo-theme-stack-master'
 
+# Add site description and author info
 [params]
+  # Basic site info
+  description = "Welcome to Reece's blog - sharing thoughts, experiences, and insights on technology, development, and life."
+  
+  # Author information
+  [params.author]
+    name = "Reece Hall"
+    # Add your email, social links, etc.
+  
   # Theme settings
-  mainSections = ['posts']
-  featuredImageField = 'image'
+  mainSections = ["post"]
+  featuredImageField = "image"
   rssFullContent = true
+
+  # Improve article features
+  [params.article]
+    toc = true
+    readingTime = true
+    
+  # Enable sidebar avatar
+  [params.sidebar]
+    avatar.enabled = true
+    avatar.local = true
+    avatar.src = "img/avatar.png"
 
 [params.footer]
   since = 2025
-  
 
 [params.colorScheme]
 toggle = true
@@ -43,10 +62,45 @@ linkHover = "#6ea8fe"
     name = 'Home'
     url = '/'
     weight = -100
-    pre = 'home'
+    [menu.main.params]
+      icon = 'home'
   [[menu.main]]
     identifier = 'about'
     name = 'About'
     url = '/about'
     weight = -90
-    pre = 'user'
+    [menu.main.params]
+      icon = 'user'
+  [[menu.main]]
+    identifier = 'contact'
+    name = 'Contact'
+    url = '/contact'
+    weight = -85
+    [menu.main.params]
+      icon = 'user'
+  [[menu.main]]
+    identifier = 'portfolio'
+    name = 'Portfolio'
+    url = 'https://Reecehall.com'
+    weight = -80
+    [menu.main.params]
+      icon = 'link'
+
+# Disable Giscus for now - will use simple reactions instead  
+[params.comments]
+  enabled = false
+  provider = "giscus"
+  
+      [params.comments.giscus]
+      repo = "R3defined/PragmaticBlog"
+      repoID = "R_kgDOO3h8vw"
+      category = "General"
+      categoryID = "DIC_kwDOO3h8v84CrXSQ"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"                 # This enables the reactions
+    emitMetadata = "0"
+    inputPosition = "top"                  # Move input to top to make hiding easier
+    theme = "gruvbox_dark"
+    lang = "en"
+    loading = "lazy"

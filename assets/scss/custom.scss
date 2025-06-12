@@ -1,0 +1,167 @@
+/* Hide Giscus comment input, only show reactions */
+
+/* Target the Giscus container */
+.giscus-frame {
+    /* Set maximum height to limit the visible area */
+    max-height: 150px !important;
+    overflow: hidden !important;
+}
+
+/* Alternative approach - Hide specific elements after Giscus loads */
+.giscus {
+    iframe {
+        max-height: 150px !important;
+        overflow: hidden !important;
+    }
+}
+
+/* Additional CSS that Giscus should respect */
+.giscus-reactions {
+    display: block !important;
+}
+
+/* Custom message above reactions */
+.article-content {
+    .giscus-frame::before {
+        content: "👍 React to this post with GitHub!";
+        display: block;
+        font-size: 0.9rem;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 500;
+    }
+}
+
+/* Try to hide the form using CSS that might penetrate iframe */
+.giscus iframe {
+    /* Limit height to approximately reactions area only */
+    height: 120px !important;
+    max-height: 120px !important;
+}
+
+/* Post-load hiding via JavaScript approach - will be loaded after Giscus */
+@media screen {
+    .giscus {
+        position: relative;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: var(--card-background);
+            pointer-events: none;
+            z-index: 10;
+        }
+    }
+}
+
+/* Custom Reactions Section */
+.article-reactions {
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+
+    .reactions-header {
+        margin-bottom: 0.75rem;
+        
+        h4 {
+            margin: 0 0 0.25rem 0;
+            color: var(--card-text-color-main);
+            font-size: 1rem;
+        }
+        
+        p {
+            margin: 0;
+            color: var(--card-text-color-secondary);
+            font-size: 0.85rem;
+        }
+    }
+
+    .reactions-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+    }
+
+    .reaction-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.75rem;
+        background: var(--body-background);
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--card-text-color-main);
+        transition: all 0.2s ease;
+        min-width: 60px;
+
+        &:hover {
+            background: var(--accent-color);
+            color: var(--accent-color-text);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent-color);
+        }
+
+        .reaction-emoji {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .reaction-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .reactions-footer {
+        p {
+            margin: 0;
+            color: var(--card-text-color-tertiary);
+            font-size: 0.8rem;
+        }
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .article-reactions {
+        padding: 0.75rem;
+        margin: 1rem 0;
+        
+        .reactions-header {
+            margin-bottom: 0.5rem;
+        }
+        
+        .reactions-buttons {
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .reaction-button {
+            min-width: 50px;
+            padding: 0.5rem;
+            
+            .reaction-emoji {
+                font-size: 1.25rem;
+            }
+            
+            .reaction-label {
+                font-size: 0.7rem;
+            }
+        }
+    }
+} 

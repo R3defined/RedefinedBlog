@@ -5,7 +5,11 @@ import '../styles/background.css';
 <canvas id="bg-canvas"></canvas>
 <canvas id="overlay-canvas"></canvas>
 
-<script src="../scripts/page-background.ts"></script>
+<script>
+// Import the background script which will automatically initialize
+import '../scripts/page-background.ts';
+</script>
+
 <style>
     #bg-canvas, #overlay-canvas {
         position: fixed;

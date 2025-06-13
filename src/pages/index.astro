@@ -44,9 +44,9 @@ const { Content: About } = await render(about!);
 			</ul>
 		</Card>
 		<Card>
-			<h3 class="no-mt">Socials</h3>
-			<ul class="overview-list">
-				{socials.map((item) => (
+			        <h3 class="no-mt">Links</h3>
+        <ul class="overview-list">
+        {socials.map((item) => (
 					<li>
 						<a href={item.data.link} class="socials-link">
 							<Icon type={item.data.icon.type} name={item.data.icon.name as any} width={24} height={24} class='glow-icon' />

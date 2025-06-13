@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Inspiration on The Blog Of Reece</title>
-        <link>http://localhost:55000/tags/inspiration/</link>
-        <description>Recent content in Inspiration on The Blog Of Reece</description>
+        <title>Inspiration on Pragmatic Cipher</title>
+        <link>http://localhost:53978/tags/inspiration/</link>
+        <description>Recent content in Inspiration on Pragmatic Cipher</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:55000/tags/inspiration/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:53978/tags/inspiration/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Adding visuals exposes new dimensions</title>
-        <link>http://localhost:55000/post/adding-visuals-exposes-new-dimensions/</link>
+        <link>http://localhost:53978/post/adding-visuals-exposes-new-dimensions/</link>
         <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:55000/post/adding-visuals-exposes-new-dimensions/</guid>
-        <description>&lt;img src="http://localhost:55000/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
+        <guid>http://localhost:53978/post/adding-visuals-exposes-new-dimensions/</guid>
+        <description>&lt;img src="http://localhost:53978/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
 &lt;/h1&gt;&lt;p&gt;Words paint a picture, but images can open entire worlds. In this post, we explore how adding visuals to your content can:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Enhance storytelling&lt;/li&gt;
@@ -26,11 +26,11 @@
         </item>
         <item>
         <title>Adding visuals exposes new dimensions</title>
-        <link>http://localhost:55000/posts/adding-visuals-exposes-new-dimensions/</link>
+        <link>http://localhost:53978/posts/adding-visuals-exposes-new-dimensions/</link>
         <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:55000/posts/adding-visuals-exposes-new-dimensions/</guid>
-        <description>&lt;img src="http://localhost:55000/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
+        <guid>http://localhost:53978/posts/adding-visuals-exposes-new-dimensions/</guid>
+        <description>&lt;img src="http://localhost:53978/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
 &lt;/h1&gt;&lt;p&gt;Words paint a picture, but images can open entire worlds. In this post, we explore how adding visuals to your content can:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Enhance storytelling&lt;/li&gt;

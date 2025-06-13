@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>The Blog Of Reece</title>
-        <link>http://localhost:50196/</link>
-        <description>Recent content on The Blog Of Reece</description>
+        <title>Pragmatic Cipher</title>
+        <link>http://localhost:53978/</link>
+        <description>Recent content on Pragmatic Cipher</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:50196/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:53978/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Contact</title>
-        <link>http://localhost:50196/contact/</link>
+        <link>http://localhost:53978/contact/</link>
         <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:50196/contact/</guid>
+        <guid>http://localhost:53978/contact/</guid>
         <description>&lt;h1 id=&#34;get-in-touch&#34;&gt;Get In Touch
 &lt;/h1&gt;&lt;p&gt;I&amp;rsquo;d love to hear from you! Whether you have questions about a post, want to collaborate on a project, or just want to say hello, don&amp;rsquo;t hesitate to reach out.&lt;/p&gt;
 &lt;h2 id=&#34;ways-to-connect&#34;&gt;Ways to Connect
@@ -47,11 +47,11 @@
         </item>
         <item>
         <title>Adding visuals exposes new dimensions</title>
-        <link>http://localhost:50196/post/adding-visuals-exposes-new-dimensions/</link>
+        <link>http://localhost:53978/post/adding-visuals-exposes-new-dimensions/</link>
         <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:50196/post/adding-visuals-exposes-new-dimensions/</guid>
-        <description>&lt;img src="http://localhost:50196/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
+        <guid>http://localhost:53978/post/adding-visuals-exposes-new-dimensions/</guid>
+        <description>&lt;img src="http://localhost:53978/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
 &lt;/h1&gt;&lt;p&gt;Words paint a picture, but images can open entire worlds. In this post, we explore how adding visuals to your content can:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Enhance storytelling&lt;/li&gt;
@@ -65,11 +65,11 @@
         </item>
         <item>
         <title>Adding visuals exposes new dimensions</title>
-        <link>http://localhost:50196/posts/adding-visuals-exposes-new-dimensions/</link>
+        <link>http://localhost:53978/posts/adding-visuals-exposes-new-dimensions/</link>
         <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:50196/posts/adding-visuals-exposes-new-dimensions/</guid>
-        <description>&lt;img src="http://localhost:50196/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
+        <guid>http://localhost:53978/posts/adding-visuals-exposes-new-dimensions/</guid>
+        <description>&lt;img src="http://localhost:53978/images/fractal.png" alt="Featured image of post Adding visuals exposes new dimensions" /&gt;&lt;h1 id=&#34;adding-visuals-exposes-new-dimensions&#34;&gt;Adding Visuals Exposes New Dimensions
 &lt;/h1&gt;&lt;p&gt;Words paint a picture, but images can open entire worlds. In this post, we explore how adding visuals to your content can:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Enhance storytelling&lt;/li&gt;
@@ -83,10 +83,10 @@
         </item>
         <item>
         <title>About</title>
-        <link>http://localhost:50196/about/</link>
+        <link>http://localhost:53978/about/</link>
         <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:50196/about/</guid>
+        <guid>http://localhost:53978/about/</guid>
         <description>&lt;p&gt;Hello, I&amp;rsquo;m &lt;strong&gt;Reece&lt;/strong&gt; - welcome to my corner of the internet!&lt;/p&gt;
 &lt;p&gt;This blog is where I share my journey through the ever-evolving world of technology, development, and the occasional life reflection. Whether you&amp;rsquo;re here for technical insights, project breakdowns, or just curious about my perspective on things, I&amp;rsquo;m glad you stopped by.&lt;/p&gt;
 &lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here
@@ -107,10 +107,10 @@
         </item>
         <item>
         <title>My First Post</title>
-        <link>http://localhost:50196/post/my-first-post/</link>
+        <link>http://localhost:53978/post/my-first-post/</link>
         <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:50196/post/my-first-post/</guid>
+        <guid>http://localhost:53978/post/my-first-post/</guid>
         <description>&lt;h1 id=&#34;welcome-to-my-blog&#34;&gt;Welcome to My Blog
 &lt;/h1&gt;&lt;p&gt;This is my first post using the Hugo Stack theme. I&amp;rsquo;m excited to share my thoughts and ideas with you.&lt;/p&gt;
 &lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next?
@@ -125,10 +125,10 @@
         </item>
         <item>
         <title>My First Post</title>
-        <link>http://localhost:50196/posts/my-first-post/</link>
+        <link>http://localhost:53978/posts/my-first-post/</link>
         <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:50196/posts/my-first-post/</guid>
+        <guid>http://localhost:53978/posts/my-first-post/</guid>
         <description>&lt;h1 id=&#34;welcome-to-my-blog&#34;&gt;Welcome to My Blog
 &lt;/h1&gt;&lt;p&gt;This is my first post using the Hugo Stack theme. I&amp;rsquo;m excited to share my thoughts and ideas with you.&lt;/p&gt;
 &lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next?

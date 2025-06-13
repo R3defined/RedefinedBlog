@@ -1,3 +1,4 @@
+"use strict";
 (() => {
   // ns-hugo-imp:/Users/Reece/Documents/Projects/Blog/themes/hugo-theme-stack-master/assets/ts/gallery.ts
   var StackGallery = class _StackGallery {

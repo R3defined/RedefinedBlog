@@ -1,6 +1,6 @@
 baseURL = 'https://Blog.reecehall.com'
 languageCode = 'en-us'
-title = 'The Blog Of Reece'
+title = 'Pragmatic Cipher'
 theme = 'hugo-theme-stack-master'
 
 # Add site description and author info

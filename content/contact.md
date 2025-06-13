@@ -17,10 +17,10 @@ I'd love to hear from you! Whether you have questions about a post, want to coll
 
 ### Social & Code
 - 🐙 **GitHub**: [Follow my projects](https://github.com/R3defined) <!-- Update with your actual GitHub -->
-- 𝕏 **Twitter**: [@your-handle](https://twitter.com/redefinedreece) <!-- Update with your actual Twitter -->
+- 𝕏 **X**: [Redefinedreece](https://twitter.com/redefinedreece) <!-- Update with your actual Twitter -->
 
 ### Direct Contact
-- 📧 **Email**: Drop me a line at [your-email@domain.com](mailto:hallmaurice31@me.com) <!-- Update with your actual email -->
+- 📧 **Email**: Drop me a line at [Hallmaurice31@me.com](mailto:hallmaurice31@me.com) <!-- Update with your actual email -->
 
 ## What I'm Interested In
 

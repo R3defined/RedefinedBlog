@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Blog on The Blog Of Reece</title>
+        <link>http://localhost:55000/tags/blog/</link>
+        <description>Recent content in Blog on The Blog Of Reece</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:55000/tags/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>My First Post</title>
+        <link>http://localhost:55000/post/my-first-post/</link>
+        <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:55000/post/my-first-post/</guid>
+        <description>&lt;h1 id=&#34;welcome-to-my-blog&#34;&gt;Welcome to My Blog
+&lt;/h1&gt;&lt;p&gt;This is my first post using the Hugo Stack theme. I&amp;rsquo;m excited to share my thoughts and ideas with you.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next?
+&lt;/h2&gt;&lt;p&gt;I plan to write about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Technology&lt;/li&gt;
+&lt;li&gt;Personal experiences&lt;/li&gt;
+&lt;li&gt;Interesting projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stay tuned for more content!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>My First Post</title>
+        <link>http://localhost:55000/posts/my-first-post/</link>
+        <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:55000/posts/my-first-post/</guid>
+        <description>&lt;h1 id=&#34;welcome-to-my-blog&#34;&gt;Welcome to My Blog
+&lt;/h1&gt;&lt;p&gt;This is my first post using the Hugo Stack theme. I&amp;rsquo;m excited to share my thoughts and ideas with you.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next?
+&lt;/h2&gt;&lt;p&gt;I plan to write about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Technology&lt;/li&gt;
+&lt;li&gt;Personal experiences&lt;/li&gt;
+&lt;li&gt;Interesting projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stay tuned for more content!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

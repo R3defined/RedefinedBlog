@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "icon": {
+      "type": "lucide",
+      "name": "user"
+    },
+    "text": "Reece Hall"
+  },
+  {
+    "id": 2,
+    "icon": {
+      "type": "lucide",
+      "name": "globe"
+    },
+    "text": "Developer & Creator"
+  }
+]

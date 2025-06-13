@@ -6,8 +6,251 @@ import '../styles/background.css';
 <canvas id="overlay-canvas"></canvas>
 
 <script>
-// Import the background script which will automatically initialize
-import '../scripts/page-background.ts';
+// Background script with enhanced error handling and debugging
+console.log('🎨 Background script loaded');
+
+async function loadFont() {
+  try {
+    console.log('📝 Loading Geist Mono font...');
+    const font = new FontFace('Geist Mono', 'url(/fonts/GeistMono.woff2)');
+    await font.load();
+    document.fonts.add(font);
+    console.log('✅ Font loaded successfully');
+    return true;
+  } catch (error) {
+    console.error('❌ Font loading failed:', error);
+    return false;
+  }
+}
+
+async function initializeBackground() {
+  try {
+    console.log('🚀 Initializing background...');
+    
+    // Load font first
+    const fontLoaded = await loadFont();
+    if (!fontLoaded) {
+      console.warn('⚠️ Font loading failed, proceeding with system font');
+    }
+
+    // Get canvas elements
+    const canvas = document.getElementById('bg-canvas') as HTMLCanvasElement;
+    const overlayCanvas = document.getElementById('overlay-canvas') as HTMLCanvasElement;
+
+    if (!canvas || !overlayCanvas) {
+      console.error('❌ Canvas elements not found');
+      return;
+    }
+
+    console.log('🎯 Canvas elements found:', { canvas, overlayCanvas });
+
+    // Get primary RGB color
+    const primaryRgb = getComputedStyle(document.documentElement).getPropertyValue('--primary-rgb').trim();
+    console.log('🎨 Primary RGB:', primaryRgb);
+
+    if (!primaryRgb) {
+      console.error('❌ Primary RGB color not found');
+      return;
+    }
+
+    // Initialize background
+    const background = new PageBackground(canvas, overlayCanvas);
+    console.log('✅ Background initialized successfully');
+
+    // Add resize listener
+    window.addEventListener('resize', () => {
+      background.resizeBackground();
+    });
+
+  } catch (error) {
+    console.error('❌ Background initialization failed:', error);
+  }
+}
+
+class PageBackground {
+  private LETTER_FADE_DURATION: [number, number] = [2, 7];
+  private baseCanvas: HTMLCanvasElement;
+  private overlayCanvas: HTMLCanvasElement;
+  private baseCtx: CanvasRenderingContext2D;
+  private overlayCtx: CanvasRenderingContext2D;
+  private width: number = window.innerWidth;
+  private height: number = window.innerHeight;
+  private letterPositions: any[] = [];
+  private letterInstances: any[] = [];
+  private primaryRgb: string;
+
+  constructor(baseCanvas: HTMLCanvasElement, overlayCanvas: HTMLCanvasElement) {
+    console.log('🏗️ Creating PageBackground instance');
+    
+    const baseCtx = baseCanvas.getContext('2d');
+    const overlayCtx = overlayCanvas.getContext('2d');
+
+    if (!baseCtx || !overlayCtx) {
+      throw new Error('Unable to get 2D context.');
+    }
+
+    this.baseCanvas = baseCanvas;
+    this.overlayCanvas = overlayCanvas;
+    this.baseCtx = baseCtx;
+    this.overlayCtx = overlayCtx;
+
+    baseCanvas.width = this.width;
+    baseCanvas.height = this.height;
+    overlayCanvas.width = this.width;
+    overlayCanvas.height = this.height;
+
+    this.primaryRgb = getComputedStyle(document.documentElement).getPropertyValue('--primary-rgb').trim();
+    console.log('🎨 Using primary RGB:', this.primaryRgb);
+
+    this.initBackground();
+    requestAnimationFrame(this.redrawBackground);
+  }
+
+  private initBackground = () => {
+    console.log('🎯 Initializing background pattern');
+    
+    let text: string = document.title.toLowerCase().split(' | ')[0].replace(/\s/g, '_') || 'pragmatic_programmer';
+
+    if (text.includes("_")) {
+      text += "_";
+    }
+
+    const letters = Math.ceil(this.width / 17);
+    const lines = Math.ceil(this.height / 35);
+
+    console.log(`📏 Canvas size: ${this.width}x${this.height}, Letters: ${letters}, Lines: ${lines}`);
+
+    this.baseCtx.font = '28px Geist Mono, monospace';
+    this.baseCtx.textAlign = 'start';
+    this.baseCtx.textBaseline = 'top';
+    this.baseCtx.fillStyle = 'rgba(255, 255, 255, 0.01)';
+
+    for (let i = 0; i < lines; i++) {
+      for (let j = 0; j < letters; j++) {
+        this.baseCtx.fillText(text[j % text.length], j * 17, i * 35);
+        this.letterPositions.push({
+          x: j * 17,
+          y: i * 35,
+          letter: text[j % text.length]
+        });
+      }
+    }
+
+    const randomLetters = this.getRandomAmountFromArray(this.letterPositions, Math.floor(lines * 0.75));
+
+    this.overlayCtx.font = 'bold 28px Geist Mono, monospace';
+    this.overlayCtx.textAlign = 'start';
+    this.overlayCtx.textBaseline = 'top';
+    this.overlayCtx.fillStyle = `rgba(${this.primaryRgb}, 0)`;
+    this.overlayCtx.shadowBlur = 16;
+    this.overlayCtx.shadowColor = `rgba(${this.primaryRgb}, 0)`;
+
+    for (const letter of randomLetters) {
+      this.overlayCtx.fillText(letter.letter, letter.x, letter.y);
+      const animLength = this.LETTER_FADE_DURATION[0] + Math.random() * (this.LETTER_FADE_DURATION[1] - this.LETTER_FADE_DURATION[0]);
+      this.letterInstances.push({
+        x: letter.x,
+        y: letter.y,
+        letter: letter.letter,
+        timestamp: Date.now(),
+        fadeout: Date.now() + animLength * 1000
+      });
+    }
+
+    this.baseCanvas.style.opacity = '1';
+    console.log('✅ Background pattern initialized');
+  }
+
+  private getRandomAmountFromArray = (arr: any[], n = 20): any[] => {
+    let len = arr.length;
+    const result = new Array(n);
+    const taken = new Array(len);
+    
+    if (n > len) {
+      throw new Error("getRandomAmountFromArray: more elements taken than available");
+    }
+
+    while (n--) {
+      const x = Math.floor(Math.random() * len);
+      result[n] = arr[x in taken ? taken[x] : x];
+      taken[x] = --len in taken ? taken[len] : len;
+    }
+
+    return result;
+  }
+
+  private easeInOutSine = (timestamp: number, start: number, end: number) => {
+    const totalDuration = end - start;
+    
+    if (timestamp < start) return 0;
+    if (timestamp > end) {
+      const elapsedAfterEnd = timestamp - end;
+      const progressAfterEnd = elapsedAfterEnd / (totalDuration / 2);
+      return Math.sin(progressAfterEnd * Math.PI);
+    }
+    
+    const progress = (timestamp - start) / totalDuration;
+    return Math.max(0, 0.5 - 0.5 * Math.cos(progress * Math.PI));
+  }
+
+  private redrawBackground = () => {
+    this.overlayCtx.clearRect(0, 0, this.overlayCanvas.width, this.overlayCanvas.height);
+    this.overlayCtx.font = 'bold 28px Geist Mono, monospace';
+    this.overlayCtx.textAlign = 'start';
+    this.overlayCtx.textBaseline = 'top';
+    this.overlayCtx.shadowBlur = 16;
+
+    for (const letter of this.letterInstances) {
+      if (letter.fadeout > Date.now()) continue;
+
+      const alpha = this.easeInOutSine(Date.now(), letter.timestamp, letter.fadeout);
+
+      if (alpha <= 0 && Date.now() > letter.fadeout) {
+        this.letterInstances.splice(this.letterInstances.indexOf(letter), 1);
+        const randomLetter = this.getRandomAmountFromArray(this.letterPositions, 1);
+
+        this.letterInstances.push({
+          x: randomLetter[0].x,
+          y: randomLetter[0].y,
+          letter: randomLetter[0].letter,
+          timestamp: Date.now(),
+          fadeout: Date.now() + (this.LETTER_FADE_DURATION[0] + Math.random() * (this.LETTER_FADE_DURATION[1] - this.LETTER_FADE_DURATION[0])) * 1000
+        });
+      }
+      
+      this.overlayCtx.fillStyle = `rgba(${this.primaryRgb}, ${alpha})`;
+      this.overlayCtx.shadowColor = `rgba(${this.primaryRgb}, ${alpha})`;
+      this.overlayCtx.fillText(letter.letter, letter.x, letter.y);
+    }
+    
+    requestAnimationFrame(this.redrawBackground);
+  }
+
+  public resizeBackground = () => {
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+
+    this.baseCanvas.width = this.width;
+    this.baseCanvas.height = this.height;
+    this.overlayCanvas.width = this.width;
+    this.overlayCanvas.height = this.height;
+    
+    this.baseCtx.clearRect(0, 0, this.baseCanvas.width, this.baseCanvas.height);
+    this.overlayCtx.clearRect(0, 0, this.overlayCanvas.width, this.overlayCanvas.height);
+
+    this.letterInstances = [];
+    this.letterPositions = [];
+
+    this.initBackground();
+  }
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeBackground);
+} else {
+  initializeBackground();
+}
 </script>
 
 <style>
@@ -17,13 +260,16 @@ import '../scripts/page-background.ts';
         left: 0;
         width: 100vw;
         height: 100vh;
-    }
-
-    #bg-canvas {
-        z-index: -1;
+        z-index: -2;
+        opacity: 0;
+        transition: all 0.15s ease;
+        font-family: 'Geist Mono', monospace;
+        user-select: none;
+        pointer-events: none;
     }
 
     #overlay-canvas {
-        z-index: -1;
+        opacity: 1;
+        z-index: -1 !important;
     }
 </style>

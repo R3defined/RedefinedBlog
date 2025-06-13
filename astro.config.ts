@@ -31,10 +31,10 @@ const config = defineConfig({
     mdx(),
     sitemap(),
     spectre({
-      	name: 'Pragmatic Cipher',
-	openGraph: {
-		home: {
-			title: 'Pragmatic Cipher',
+      		name: 'Redefined Cipher',
+		openGraph: {
+			home: {
+				title: 'Redefined Cipher',
           description: "Welcome to Reece's blog - sharing thoughts, experiences, and insights on technology, development, and life."
         },
         blog: {

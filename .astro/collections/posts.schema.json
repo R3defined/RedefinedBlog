@@ -99,8 +99,7 @@
         "title",
         "createdAt",
         "description",
-        "tags",
-        "image"
+        "tags"
       ],
       "additionalProperties": false
     }

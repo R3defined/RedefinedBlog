@@ -1,5 +1,0 @@
-{{ $giscusJS := resources.Get "js/giscus-reactions-only.js" }}
-{{ if $giscusJS }}
-{{ $giscusJS := $giscusJS | js.Build }}
-<script src="{{ $giscusJS.RelPermalink }}" defer></script>
-{{ end }} 

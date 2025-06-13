@@ -9,7 +9,9 @@
     "start": "node dist/server/entry.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "postbuild": "pagefind --site dist"
+    "postbuild": "pagefind --site dist",
+    "new-post": "node scripts/new-post.js",
+    "drafts": "find src/content/posts -name '*.mdx' -exec grep -l 'draft.*true' {} \\;"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

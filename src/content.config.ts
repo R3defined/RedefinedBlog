@@ -65,7 +65,7 @@ const posts = defineCollection({
       reference("tags")
     ),
     draft: z.boolean().optional().default(false),
-    image: image(),
+    image: image().optional(),
   })
 });
 

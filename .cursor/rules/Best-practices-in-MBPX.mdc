@@ -1,0 +1,177 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Best Practices for Using Cursor on macOS
+
+## Terminal Configuration
+
+### Shell Selection
+- Use `zsh` as your default shell (macOS default)
+- Avoid PowerShell for git operations due to display buffer issues
+- Consider using `oh-my-zsh` for enhanced terminal features
+
+### Git Configuration
+```bash
+# Set your default editor
+git config --global core.editor "code --wait"
+
+# Configure line endings for macOS
+git config --global core.autocrlf input
+
+# Set default branch name
+git config --global init.defaultBranch main
+```
+
+## Cursor IDE Settings
+
+### Performance Optimization
+- Keep the number of open tabs to a minimum
+- Use the file explorer to navigate instead of keeping many files open
+- Enable "Auto Save" to prevent data loss
+
+### Keyboard Shortcuts
+- `Cmd + P`: Quick file search
+- `Cmd + Shift + P`: Command palette
+- `Cmd + B`: Toggle sidebar
+- `Cmd + J`: Toggle terminal
+- `Cmd + /`: Toggle line comment
+- `Cmd + Shift + F`: Search across files
+
+### AI Features
+- Use `Cmd + K` to open AI chat
+- Use `Cmd + L` to explain selected code
+- Use `Cmd + I` to generate code from comments
+- Use `Cmd + Shift + L` to refactor code
+
+## Project Structure
+
+### Directory Organization
+```
+project/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+├── public/
+├── tests/
+└── docs/
+```
+
+### File Naming Conventions
+- Use kebab-case for file names: `my-component.tsx`
+- Use PascalCase for component files: `Button.tsx`
+- Use camelCase for utility files: `formatDate.ts`
+
+## Version Control
+
+### Git Workflow
+1. Create feature branches from `main`
+2. Make atomic commits
+3. Write clear commit messages
+4. Pull before pushing
+5. Review changes before committing
+
+### Commit Message Format
+```
+type(scope): subject
+
+[optional body]
+
+[optional footer]
+```
+
+Types:
+- feat: New feature
+- fix: Bug fix
+- docs: Documentation changes
+- style: Code style changes
+- refactor: Code refactoring
+- test: Adding tests
+- chore: Maintenance tasks
+
+## Code Quality
+
+### Linting and Formatting
+- Enable ESLint for JavaScript/TypeScript
+- Use Prettier for code formatting
+- Configure auto-format on save
+
+### Documentation
+- Write clear comments for complex logic
+- Document function parameters and return values
+- Keep README.md up to date
+- Document environment setup requirements
+
+## Performance Tips
+
+### Editor Performance
+- Close unused tabs
+- Use the file explorer instead of keeping many files open
+- Disable unnecessary extensions
+- Clear editor cache periodically
+
+### Project Performance
+- Use lazy loading for large components
+- Implement code splitting
+- Optimize images and assets
+- Use proper caching strategies
+
+## Troubleshooting
+
+### Common Issues
+1. **Terminal Display Issues**
+   - Use `zsh` instead of PowerShell
+   - Avoid piping to `cat`
+   - Use native git commands
+
+2. **Performance Issues**
+   - Clear editor cache
+   - Restart Cursor
+   - Check system resources
+
+3. **Git Issues**
+   - Ensure proper line endings
+   - Check git configuration
+   - Verify remote repository settings
+
+## Resources
+
+### Useful Links
+- [Cursor Documentation](mdc:https:/cursor.sh/docs)
+- [Git Documentation](mdc:https:/git-scm.com/doc)
+- [macOS Terminal Guide](mdc:https:/support.apple.com/guide/terminal/welcome/mac)
+
+### Recommended Extensions
+- GitLens
+- ESLint
+- Prettier
+- Error Lens
+- Path Intellisense
+
+## Security Best Practices
+
+### Code Security
+- Never commit sensitive data
+- Use environment variables
+- Implement proper authentication
+- Follow OWASP guidelines
+
+### Git Security
+- Use SSH keys for authentication
+- Enable 2FA for GitHub
+- Review code before committing
+- Use git hooks for pre-commit checks
+
+## Conclusion
+
+Following these best practices will help you:
+- Improve development efficiency
+- Maintain code quality
+- Prevent common issues
+- Enhance collaboration
+- Ensure project security
+
+Remember to regularly update these practices as new features and improvements become available in Cursor and related tools.

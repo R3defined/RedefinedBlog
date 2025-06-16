@@ -42,7 +42,8 @@ const config = defineConfig({
           description: 'Thoughts, experiences, and insights on technology, development, and life.'
         },
         projects: {
-          title: 'Projects'
+          title: 'Projects',
+          description: 'Exploring technology, systems, and strategic frameworks through the lens of mastery. Powered by Redefine Labs.'
         }
       },
       giscus: {

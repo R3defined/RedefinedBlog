@@ -11,6 +11,30 @@
     "id": 2,
     "icon": {
       "type": "lucide",
+      "name": "graduation-cap"
+    },
+    "text": "Bachelor of Science in Cybersecurity - Computer Science | Southern New Hampshire University"
+  },
+  {
+    "id": 3,
+    "icon": {
+      "type": "lucide",
+      "name": "mail"
+    },
+    "text": "Hallmaurice31@me.com"
+  },
+  {
+    "id": 4,
+    "icon": {
+      "type": "lucide",
+      "name": "phone"
+    },
+    "text": "(586) 960-9311"
+  },
+  {
+    "id": 5,
+    "icon": {
+      "type": "lucide",
       "name": "globe"
     },
     "text": "Developer & Creator"

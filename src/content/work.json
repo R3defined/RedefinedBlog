@@ -1,9 +1,26 @@
 [
   {
     "id": 1,
-    "duration": "2024 - present",
-    "company": "Astro Community",
-    "title": "Astro Theme",
-    "description": "Existing as an Astro theme for anyone to use."
+    "duration": "Feb 2024 - Present",
+    "company": "SMZ Advertising",
+    "title": "IT Systems Administrator",
+    "location": "Troy, MI",
+    "description": "Implemented and managed data backup strategies, ensuring business continuity and disaster recovery readiness. Reduced system downtime by 90% through proactive monitoring and early threat detection. Optimized application performance, reducing downtime by 60%. Researched and integrated emerging technologies to enhance security and scalability."
+  },
+  {
+    "id": 2,
+    "duration": "Jan 2023 - Present",
+    "company": "Redefined Solutions",
+    "title": "Lead System Architect",
+    "location": "Detroit, MI",
+    "description": "Designed and implemented automation frameworks, optimizing workflows. Deployed scalable cloud-native infrastructure, reducing operational overhead by 40%. Led AI technology deployment and managed automation pipelines. Optimized business processes through analytics and implemented security best practices."
+  },
+  {
+    "id": 3,
+    "duration": "May 2021 - Present",
+    "company": "Apple",
+    "title": "Technical Support Engineer",
+    "location": "Troy, MI",
+    "description": "Performed in-depth diagnostics and root-cause analysis. Translated complex technical concepts into clear insights. Provided expert technical guidance and preventive maintenance recommendations. Collaborated with engineering teams to enhance support processes."
   }
 ]
